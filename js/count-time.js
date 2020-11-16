@@ -1,5 +1,5 @@
 /**
- * 计时器,每次重新计算效率有待优化
+ * 计时器
  * @param  {[type]} target [description]
  * @param  {[type]} d      [description]
  * @param  {[type]} h      [description]
