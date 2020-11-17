@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,10 +10,10 @@
 </head>
 
 <body>
-    
-    <!-- <audio autoplay="autoplay" loop="-1">
-        <source  src="bgm/2.mp3" type="audio/mp3" />
-    </audio> -->
+
+    <audio autoplay loop>
+        <source  src="./bgm/2.mp3" type="audio/mp3" />
+    </audio>
     <div id="back">
         <div class="mask"></div>
         <!-- 设置展示的图片 -->
@@ -81,11 +82,18 @@
                     </p>
                     <br \>
                     <p class="text-center" style="color:#4fc27d;font-size: 17px" id="say"></p>
-                    <audio id="bgm" autoplay src="./bgm/2.mp3" controls="controls" loop></audio>
+                    <audio id="bgm" src="./bgm/2.mp3" loop></audio>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('click', musicPlay);
+        function musicPlay() {
+            document.getElementById('bgm').play();
+            document.removeEventListener('click', musicPlay);
+        }
+    </script>
     <script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/count-time.js"></script>
@@ -137,6 +145,7 @@
 
     });
     </script>
+
 </body>
 
 </html>
