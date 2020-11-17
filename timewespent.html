@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Time we spent together</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+
+<body>
+    <audio autoplay="autoplay" loop="-1">
+        <source  src="./bgm/2.mp3" type="audio/mp3" />
+    </audio>
+    <div id="back">
+        <div class="mask"></div>
+        <!-- 设置展示的图片 -->
+        <div id="carousel"  class="carousel slide carousel-fade carousel-position">
+            <div class="carousel-inner" style="width: 100%;height: 100%;" id="background">
+                <div class="item active" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background:url(./img/1.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/2.jpg) ;background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/3.jpg) ;background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/4.jpg) ;background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/5.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/6.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/7.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/8.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/9.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/10.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/11.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/12.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/13.jpg);background-size: cover;"></div>
+                </div>
+                <div class="item" style="width: 100%;height: 100%;">
+                    <div style="width: 100%;height: 100%;background-image: url(./img/14.jpg);background-size: cover;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal show" style="top:2%;">
+        <div class="modal-dialog" style="opacity: .85">
+            <div class="modal-content" style="opacity:.75">
+                <div class="modal-header">
+                    <h1 class="text-center" style="color: #4fc27d;font-family: 'Lucida Handwriting', cursive;font-size: 6rem;">Time we spent together</h1>
+                    <p class="text-center small-title">XN & ZJC</p>
+                    <p class="text-center small-title">LOVING ON THE WAY</p>
+                </div>
+                <div class="modal-body text-center" style="line-height: 1.5rem;font-family: 'Lucida Handwriting', cursive;font-size: 2rem;">
+                    <p>
+                        <span id="day" class="time-font"></span><span style="color:#4fc27d">/&nbsp;</span><span id="hour" class="time-font"></span><span style="color:#4fc27d">/&nbsp;</span><span id="minute" class="time-font"></span><span style="color:#4fc27d">/&nbsp;</span><span id="second" class="time-font"></span>
+                    </p>
+                    <p>
+                        days/hours/min/sec
+                    </p>
+                    <br \>
+                    <p class="text-center" style="color:#4fc27d;font-size: 17px" id="say"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/count-time.js"></script>
+    <script>
+    $(function() {
+        //设置起始日期
+        countTime('2012/11/17 00:00', 'day', 'hour', 'minute', 'second');
+        var days = $('#day').text();
+
+        // 设置标题
+        if (parseInt(days / 365) != 0) {
+            $(document).attr("Time we spent together");
+        } else if (parseInt(days / 30) != 0) {
+            $(document).attr("Time we spent together");
+        } else
+            $(document).attr("Time we spent together");
+
+        //设置每一张图片对应的文字
+        var says = new Array(
+            "2015年9月，黄山",
+            "2015年9月，黄山",
+            "2015年10月，石景山",
+            "2016年5月，奶酪火锅",
+            "2016年7月，北京",
+            "2016年10月，北京",
+            "2017年2月，北京",
+            "2017年5月，烤全鸡",
+            "2019年8月，圣家堂",
+            "2019年8月，巴塞罗那Tibidabo",
+            "2019年8月，forca barca",
+            "2019年8月，奎尔公园",
+            "2019年8月，奎尔公园",
+            "爱你哟~",
+        );
+
+
+        var start = function() {
+            var index = 0;
+            var rate = 6000;
+            $('#say').text(says[(index++) % says.length]);
+         	var _play = function () {
+         		$('#say').hide();
+                $('#say').text(says[(index++) % says.length]);
+                $('#say').fadeToggle();
+                $('#carousel').carousel('next');
+         	};
+            setInterval(_play, rate);
+        }();
+
+    });
+    </script>
+</body>
+
+</html>
