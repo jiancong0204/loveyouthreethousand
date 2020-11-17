@@ -9,9 +9,10 @@
 </head>
 
 <body>
-    <audio autoplay="autoplay" loop="-1">
+    
+    <!-- <audio autoplay="autoplay" loop="-1">
         <source  src="bgm/2.mp3" type="audio/mp3" />
-    </audio>
+    </audio> -->
     <div id="back">
         <div class="mask"></div>
         <!-- 设置展示的图片 -->
@@ -63,6 +64,7 @@
         </div>
     </div>
     <div class="modal show" style="top:2%;">
+        <audio id="bgm" autoplay src="./bgm/2.mp3" controls="controls" loop></audio>
         <div class="modal-dialog" style="opacity: .85">
             <div class="modal-content" style="opacity:.75">
                 <div class="modal-header">
