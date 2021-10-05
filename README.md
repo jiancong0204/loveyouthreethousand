@@ -1,5 +1,5 @@
 # ! New Repo
-Click [here](https://jiancong0204.github.io/time-we-spent/timewespent.html)
+Click [here](https://gitee.com/jiancong0204/time-we-spent)
 
 
 # Demo Link
